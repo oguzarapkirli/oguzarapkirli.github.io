@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Oğuz Arapkirli, Android Developer">
+    <meta name="description" content="Oğuz Arapkirli, Software Developer" />
     <!-- Define title -->
     <title>Oğuz Arapkirli</title>
 
@@ -20,13 +20,33 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.498/build/spline-viewer.js"></script>
-    <spline-viewer loading-anim-type="spinner-big-dark"
-        url="https://prod.spline.design/lLPQzNgEtqAmwRfF/scene.splinecode"></spline-viewer> -->
+    <!-- Include Spline Viewer -->
+    <script>
+        window.onload = function () {
+            if (!isMobileDevice()) {
+                loadScript("https://unpkg.com/@splinetool/viewer@0.9.498/build/spline-viewer.js");
+                createSplineViewer();
+            }
+        }
 
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.498/build/spline-viewer.js"></script>
-    <spline-viewer loading-anim-type="spinner-big-dark"
-        url="https://prod.spline.design/RdS-TB8pEgFLHk3y/scene.splinecode"></spline-viewer>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
+
+        function loadScript(url) {
+            var script = document.createElement("script");
+            script.type = "module";
+            script.src = url;
+            document.head.appendChild(script);
+        }
+
+        function createSplineViewer() {
+            var splineViewer = document.createElement("spline-viewer");
+            splineViewer.setAttribute("loading-anim-type", "spinner-big-dark");
+            splineViewer.setAttribute("url", "https://prod.spline.design/RdS-TB8pEgFLHk3y/scene.splinecode");
+            document.body.appendChild(splineViewer);
+        }
+    </script>
 
     <!-- Include style sheets -->
     <link rel="stylesheet" href="style.css" />
@@ -44,17 +64,16 @@
 
 <body>
     <section id="content" class="section">
-        <h1>Hi, I'm Oğuz Arapkirli!</h1>
+        <h1>Hi, I'm Oğuz!</h1>
         <p> A passionate software developer experienced in both mobile and backend development, having worked in various
             different sectors.</p>
         <p> Feel free to contact me for any potential opportunities.</p>
-
-        <!-- Icons -->
         <ul class="icons">
             <li>
                 <a href="mailto:oguzarapkirli06@gmail.com" target="_blank" title="E-Mail"><i
                         class="fas fa-envelope"></i></a>
             </li>
+
             <li>
                 <a href="https://github.com/oguzarapkirli" target="_blank" title="GitHub"><i
                         class="fab fa-github"></i></a>

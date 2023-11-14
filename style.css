@@ -24,6 +24,7 @@ body {
     line-height: 1.6em;
     border-radius: 32px;
     background-color: #00000071;
+    z-index: 2;
 }
 
 .icons {
@@ -35,6 +36,7 @@ body {
     width: 80%;
     max-width: 320px;
     margin: 1em auto;
+
 }
 
 p {
@@ -45,10 +47,11 @@ h1 {
     color: white;
 }
 
-
 .icons li {
-    display: inline;
+    display: block;
     width: 42px;
+    height: 42px;
+    margin-left: 16px;
 }
 
 .icons a {
