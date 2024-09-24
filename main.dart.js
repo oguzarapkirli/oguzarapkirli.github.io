@@ -92888,7 +92888,7 @@ A.ac4.prototype={
 $0(){this.a.q5(A.de("https://github.com/oguzarapkirli",0,null))},
 $S:0}
 A.ac5.prototype={
-$0(){this.a.q5(A.de("https://www.linkedin.com/in/oguzarapkirli/",0,null))},
+$0(){this.a.q5(A.de("https://www.linkedin.com/in/oguz-arapkirli/",0,null))},
 $S:0}
 A.ac6.prototype={
 $0(){this.a.q5(A.de("mailto:oguzarapkirli06@gmail.com",0,null))},
